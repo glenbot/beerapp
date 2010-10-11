@@ -3,11 +3,24 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Beer App -  {% block title %}{% endblock %}</title>
+	<style type="text/css" media="screen">@import "{{ MEDIA_URL }}css/jqtouch/jqtouch.min.css";</style>
+	<style type="text/css" media="screen">@import "{{ MEDIA_URL }}css/jqtouch/themes/apple/theme.min.css";</style>
 	{% block extra_head %}{% endblock %}
 </head>
 <body>
 	{% block content %}{% endblock %}
 </body>
 <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}js/jqtouch.min.js"></script>
+<script type="text/javascript">
+$(document).bind('ready',function() {
+	$.jQTouch({
+	    icon: false,
+	    statusBar: 'default',
+	    preloadImages: false
+	});
+});
+$(document).trigger('ready');
+</script>
 {% block bottom_scripts %}{% endblock %}
 </html>

@@ -5,7 +5,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^$', direct_to_template, {"template": "home.html",}, name="home"),
+    (r'^$', include('home.urls')),
     (r'^admin/', include(admin.site.urls)),
 )
 

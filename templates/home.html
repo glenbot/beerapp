@@ -3,5 +3,28 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-	<p>Beer app demo</p>
+<div id="about" class="selectable">
+   <p>Beer App Alpha</p>
+   <p><a href="#" class="grayButton goback">Close</a></p>
+</div>
+<div id="beers">
+    <div class="toolbar">
+        <h1>Beers</h1>
+        <a class="back" href="#">Home</a>
+    </div>
+    <ul class="rounded">
+        {% for beer in beers %}
+        	<li>{{ beer.name }}</li>
+        {% endfor %}
+    </ul>
+</div>
+<div id="home" class="current">
+    <div class="toolbar">
+        <h1>Beer App Alpha</h1>
+        <a class="button slideup" id="infoButton" href="#about">About</a>
+    </div>
+    <ul class="rounded">
+        <li class="arrow"><a href="#beers">Beers</a></li>
+    </ul>
+</div>
 {% endblock %}
