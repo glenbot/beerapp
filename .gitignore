@@ -2,3 +2,9 @@
 *.swp
 *.db
 *.swo
+
+# Ignore all dotfiles...
+.*
+
+# except for .gitignore
+!.gitignore

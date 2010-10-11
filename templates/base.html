@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Beer App -  {% block title %}{% endblock %}</title>
+	{% block extra_head %}{% endblock %}
+</head>
+<body>
+	{% block content %}{% endblock %}
+</body>
+<script type="text/javascript" src="{{ MEDIA_URL }}js/jquery-1.4.2.min.js"></script>
+{% block bottom_scripts %}{% endblock %}
+</html>
