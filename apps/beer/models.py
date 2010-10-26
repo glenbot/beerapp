@@ -1,6 +1,7 @@
 from django.db import models
 
-TYPE_CHOICES = (('draft','Draft'),('bottle','Bottle'),)
+TYPE_CHOICES = (('draft', 'Draft'), ('bottle', 'Bottle'), )
+
 
 class Beer(models.Model):
     name = models.CharField(max_length=150, blank=True)
@@ -9,7 +10,6 @@ class Beer(models.Model):
     description = models.TextField()
     create_dt = models.DateField(auto_now_add=True)
     update_dt = models.DateField(auto_now=True)
-    
+
     def __unicode__(self):
         return self.name
-

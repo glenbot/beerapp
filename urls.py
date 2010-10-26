@@ -19,7 +19,7 @@ except ImportError:
     # serve static files
     if settings.DEBUG:
         urlpatterns += patterns('',
-            (r'^site_media/(?P<path>.*)$', 
+            (r'^site_media/(?P<path>.*)$',
             'django.views.static.serve',
-            {'document_root': join(settings.PROJECT_ROOT,'site_media')}),         
+            {'document_root': join(settings.PROJECT_ROOT, 'site_media')}),
         )
